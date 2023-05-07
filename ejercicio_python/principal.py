@@ -18,12 +18,17 @@ def main():
                 numProf=int(input("Escriba la cantidad de profesores: "))
                 u = Universidad(nombre, siglas, direc, numProf)
                 arregloU.append(u)
+                u.agregarCarreras()
+                
 
             if seleccion == 2:
                 print("======Universidades======")
                 registro=0
                 while registro < len(arregloU):
                                     arregloU[registro].imprimirInformacion()
+                                    arregloU[registro].listadoCarreras()
+                                    arregloU[registro].listadoCarreras()[0].imprimirInformacion()
+                                    arregloU[registro].listadoCarreras()[1].imprimirInformacion()
                                     registro+=1
 
 
